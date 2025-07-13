@@ -5,7 +5,7 @@ require('dotenv').config();
 
 
 // Define the url
-// const mongoURL = 'mongodb://localhost:27017/db'; // Local Database server
+// const mongoURL = process.env.MONGODB_URL_LOCAL; // Local Database server
 const mongoURL = process.env.MONGODB_URL; // Cloud Database Serve (Monogdb atlas)
 
 // Setup the mongodb connection
