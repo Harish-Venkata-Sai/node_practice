@@ -27,7 +27,7 @@ const menuRoute = require('./Routes/menuRoute');
 app.use('/person', personRoute);
 app.use('/', menuRoute);
 
-
+// To run the express surver
 app.listen(3000, () => {
     console.log('listening on port 3000');
 })
