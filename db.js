@@ -1,10 +1,14 @@
 // Import the mongoose library
 const mongoose = require('mongoose');
 // const { use } = require('react');
+require('dotenv').config();
 
-// Define th url
+
+// Define the url
 // const mongoURL = 'mongodb://localhost:27017/db'; // Local Database server
-const mongoURL = 'mongodb+srv://NodePractice:Node123@cluster0.nl7ffjn.mongodb.net/'; // Cloud Database Serve (Monogdb atlas)
+const mongoURL = process.env.MONGODB_URL; // Cloud Database Serve (Monogdb atlas)
+
+// Setup the mongodb connection
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
